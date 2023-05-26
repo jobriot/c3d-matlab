@@ -1,0 +1,17 @@
+Matlab function to open c3d files, made to be dependency-free and octave compatible.
+
+open_c3d(file) returns the following structure :
+
+├── analog
+│   └── channellabel
+│       └── [ frame, samples per frame ] (frame_number x samples)
+├── coord
+│   └── [ frame, points ]                (frame_number x 3*points_number)
+├── noms
+│   └── [ names ]                        (points_number)
+└── point
+    └── pointname
+            └── [ frame, xyz ]           (frame_number x 3)
+
+
+As of now it doesn't return the other properties although they are extracted and the function can easily be modified to return the groups variable.
